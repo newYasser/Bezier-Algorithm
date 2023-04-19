@@ -1,0 +1,3 @@
+E:/HELP/level3/computer graphics/task1/cmake-build-debug/CMakeFiles/task1.dir
+E:/HELP/level3/computer graphics/task1/cmake-build-debug/CMakeFiles/edit_cache.dir
+E:/HELP/level3/computer graphics/task1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
