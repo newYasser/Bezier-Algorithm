@@ -116,10 +116,3 @@ int APIENTRY WinMain(HINSTANCE hinst, HINSTANCE pinst, LPSTR cmd, int nsh)
 - Run the compiled executable file.
 - A window will appear, and you can click the left mouse button to draw Bezier curves by specifying four control points.
 
-## License
-
-This code is provided under the [MIT License](https://opensource.org/licenses/MIT). Feel free to use and modify the code for your own purposes.
-
-## Acknowledgments
-
-The code in this program is based on discussions and contributions by the author.
