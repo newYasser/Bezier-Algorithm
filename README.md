@@ -1,118 +1,45 @@
 # Bezier Curve Drawing
 
-This program demonstrates drawing a Bezier curve using the Windows API.
+This project demonstrates how to draw Bezier curves using Windows API in C++.
+
+## Table of Contents
+
+- [Introduction](#introduction)
+- [Features](#features)
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Introduction
+
+This project provides a C++ implementation for drawing Bezier curves using the Windows API. Bezier curves are widely used in computer graphics and design applications for creating smooth and curved shapes. This code demonstrates how to create and render Bezier curves using Hermite interpolation.
+
+## Features
+
+- Drawing Bezier curves using Hermite interpolation.
+- Simple and intuitive user interface to specify control points.
+- Smooth rendering of Bezier curves on a Windows window.
 
 ## Prerequisites
 
-- Windows operating system
-- C++ compiler
-- Windows SDK
+Before using this code, make sure you have the following:
 
-## Getting Started
+- Windows operating system.
+- C++ compiler (e.g., Visual Studio, MinGW) installed.
+- Basic understanding of C++ programming and Windows API.
 
-1. Include the necessary header files:
-```cpp
-#include <Windows.h>
-using namespace std;
-```
+## Installation
 
-2. Define a `point` structure to represent a point with x and y coordinates:
-```cpp
-struct point
-{
-    int x, y;
-    point() {
-        x = 0; y = 0;
-    }
+1. Clone or download the project repository from GitHub.
+2. Open the project in your preferred C++ development environment (e.g., Visual Studio).
+3. Build the project to generate the executable file.
 
-    point(int x, int y) {
-        this->x = x; this->y = y;
-    }
-};
-```
+## Usage
 
-3. Define a helper function `Round` to round a floating-point number to the nearest integer:
-```cpp
-int Round(double x)
-{
-    return (int)(x + 0.5);
-}
-```
-
-4. Implement the `DrawHermiteCurve` function to draw a Hermite curve given four control points:
-```cpp
-void DrawHermiteCurve(HDC hdc, point p1, point T1, point p2, point T2, COLORREF color)
-{
-    // Calculate alpha and beta values for the Hermite curve
-    // ...
-
-    // Iterate over t from 0 to 1 and calculate x and y coordinates
-    // ...
-
-    // Use SetPixel to draw each point of the curve
-    // ...
-}
-```
-
-5. Implement the `DrawBezierCurve` function to draw a Bezier curve by converting it to a Hermite curve:
-```cpp
-void DrawBezierCurve(HDC hdc, point P0, point P1, point P2, point P3, COLORREF color)
-{
-    // Calculate the tangent vectors T0 and T1
-    // ...
-
-    // Use DrawHermiteCurve to draw the Bezier curve
-    // ...
-}
-```
-
-6. Implement the `MyWndProc` function as the window procedure to handle mouse events and drawing the Bezier curve:
-```cpp
-LRESULT WINAPI MyWndProc(HWND hWnd, UINT mcode, WPARAM wp, LPARAM lp)
-{
-    HDC hdc;
-
-    static point points[4];
-    static int idx = 0;
-    switch (mcode)
-    {
-        case WM_LBUTTONDOWN:
-            // Handle left mouse button click
-            // ...
-
-            break;
-        case WM_CLOSE:
-            DestroyWindow(hWnd);
-            break;
-        case WM_DESTROY:
-            PostQuitMessage(0);
-            break;
-        default: return DefWindowProc(hWnd, mcode, wp, lp);
-    }
-    return 0;
-}
-```
-
-7. Implement the `WinMain` function as the entry point of the program:
-```cpp
-int APIENTRY WinMain(HINSTANCE hinst, HINSTANCE pinst, LPSTR cmd, int nsh)
-{
-    // Register the window class
-    // ...
-
-    // Create the window
-    // ...
-
-    // Enter the main message loop
-    // ...
-
-    return 0;
-}
-```
-
-## Compilation and Execution
-
-- Compile the source code using a C++ compiler with the Windows SDK.
-- Run the compiled executable file.
-- A window will appear, and you can click the left mouse button to draw Bezier curves by specifying four control points.
+1. Launch the application.
+2. Click the left mouse button to specify the control points of the Bezier curve. You need to select four control points to form a complete curve.
+3. Once four control points are selected, the application will render the Bezier curve using the specified control points.
+4. Repeat the above steps to create and render multiple Bezier curves.
 
