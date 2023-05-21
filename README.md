@@ -9,8 +9,6 @@ This project demonstrates how to draw Bezier curves using Windows API in C++.
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Introduction
 
